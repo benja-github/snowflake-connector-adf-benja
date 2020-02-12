@@ -54,3 +54,9 @@ curl --header "Content-Type:application/json" --request POST  --data '{
 
 
 curl --header "Content-Type:application/json" --request POST  --data '{"databaseName": \"MyDatabase\"}' http://localhost:7071/api/SnowflakeConnectorAdf
+
+-- Add following to local.settings.json file:
+
+ "storageAccountConnectionString": "BlobEndpoint=https://sfconnsa.blob.core.windows.net/;QueueEndpoint=https://sfconnsa.queue.core.windows.net/;FileEndpoint=https://sfconnsa.file.core.windows.net/;TableEndpoint=https://sfconnsa.table.core.windows.net/;SharedAccessSignature=sv=2019-02-02&ss=b&srt=co&sp=rl&se=2020-03-01T18:45:09Z&st=2020-02-11T10:45:09Z&spr=https&sig=GR90cTIZzEYu0RqKoGXiX3lJqkEqJXGrqCkmltNStw0%3D",
+        "storageAccountContainerName": "storedprocedures",
+        "snowflakeConnectionString": "account=xp49690;host=xp49690.west-europe.azure.snowflakecomputing.com;user=ADFCONNECTOR;password=adfconnect0R"
