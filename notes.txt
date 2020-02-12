@@ -1,0 +1,56 @@
+5f746890-9a87-4465-93cb-73167fd5881c
+
+sfconnsa SAS Token ?sv=2019-02-02&ss=b&srt=co&sp=rl&se=2020-03-07T23:02:37Z&st=2020-02-07T15:02:37Z&spr=https&sig=YWkziy5YnVdUWO9WcszTMqYrQtNHCDog%2BWSI4NC2exg%3D
+
+snowflakeConnectionString Current Version: b0538811111e4488ac92701ea63ef5a2
+secret identifier https://sfconnkv.vault.azure.net/secrets/snowflakeConnectionString/b0538811111e4488ac92701ea63ef5a2
+
+https://xp49690.west-europe.azure.snowflakecomputing.com/
+
+account=xp49690;host=xp49690.west-europe.azure.snowflakecomputing.com;user=ADFCONNECTOR;password=adfconnect0R
+
+b0538811111e4488ac92701ea63ef5a2
+
+http://localhost:7071/api/SnowflakeConnectorAdf
+
+curl --request POST -H "Content-Type:application/json" --data '{"databaseName":"MyDatabase","schemaName":"MySchema","storedProcedureName":"MyStoredProcedure","parameters":[{"name":"FIRST_NAME","type":"VARCHAR","value":"LocalFoo"},{"name":"AGE","type":"NUMBER","value":"11"}]}' http://localhost:7071/api/SnowflakeConnectorAdf
+
+curl --header "Content-Type:application/json" --request POST  --data \
+'{
+  "databaseName": "MyDatabase",
+  "schemaName": "MySchema",
+  "storedProcedureName": "MyStoredProcedure",
+  "parameters": [
+    {
+      "name": "FIRST_NAME",
+      "type": "VARCHAR",
+      "value": "LocalFoo"
+    },
+    {
+      "name": "AGE",
+      "type": "NUMBER",
+      "value": 11
+    }
+  ]
+}' http://localhost:7071/api/SnowflakeConnectorAdf
+
+curl --header "Content-Type:application/json" --request POST  --data '{
+  "databaseName": \"MyDatabase\",
+  "schemaName": \"MySchema\",
+  "storedProcedureName": \"MyStoredProcedure\",
+  "parameters": [
+    {
+      "name": \"FIRST_NAME\",
+      "type": \"VARCHAR\",
+      "value": \"LocalFoo\"
+    },
+    {
+      "name": \"AGE\",
+      "type": \"NUMBER\",
+      "value": 11
+    }
+  ]
+}' http://localhost:7071/api/SnowflakeConnectorAdf
+
+
+curl --header "Content-Type:application/json" --request POST  --data '{"databaseName": \"MyDatabase\"}' http://localhost:7071/api/SnowflakeConnectorAdf
